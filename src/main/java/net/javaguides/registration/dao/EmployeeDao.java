@@ -15,7 +15,7 @@ public class EmployeeDao {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "root", "@1234sql#abc");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees?useSSL=false&allowPublicKeyRetrieval=true", "your user name", "your password");
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
         	connection.setAutoCommit(false);
             preparedStatement.setString(1, employee.getFirstName());
